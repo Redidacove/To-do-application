@@ -1,0 +1,56 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.to-dos{
+    align-items: center;
+    margin :auto;
+    font-size: 30px; 
+    justify-content: center;
+}
+
+.body{
+    background: url("./bg.jpg");
+    min-height: 90vh;
+    background-size: 100vw 110vh;
+    justify-content: center;
+    margin: 0px;
+    padding: 40px;
+}
+#list{
+    font-size: 20px;
+    color: aliceblue;
+     justify-content: center;
+     margin-left: 28rem
+}
+.heading{
+    color: aliceblue;
+    display:flex ;
+    justify-content:center;
+    font-style: bold;
+    font-weight: 100;
+    font-size: 26px;
+    margin-right: 100px;
+    margin-bottom:  10px;
+}
+#new-task-form{
+    align-items: center ;
+    justify-content: center;
+     margin-left: 28rem;
+    margin-top: 10px;
+        
+    
+}
+#new-task-title{
+    height: 22px;
+
+}
+#entry{
+    align-items: center;
+    display: flex;
+}
+.submit-btn{
+    box-sizing: 50px;
+    font-size: 20px;
+
+}
