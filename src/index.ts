@@ -12,21 +12,25 @@ const input=document.querySelector<HTMLInputElement>("#new-task-title");
 const Tasks:Task[] =loadTasks();
 Tasks.forEach(addListItem)
 
-form?.addEventListener("submit", e =>{
- e.preventDefault();
- if(input?.value==""||input?.value==null)return;
+const button = document.querySelector(".submit-btn");
+button?.addEventListener("mouseover", e => {
+  e.preventDefault();
+  if (input?.value == "" || input?.value == null) return;
+  // Use setTimeout to delay the submission by 1 second
+  setTimeout(() => {
+    const newTask: Task = {
+      id: uuidV4(),
+      title: input.value,
+      completed: false,
+      createdAt: new Date(),
+    };
+    Tasks.push(newTask);
+    addListItem(newTask);
+    saveTasks();
+    input.value = "";
+  }, 500);
+});
 
- const newTask:Task= {
-  id: uuidV4(),
-  title: input.value,
-  completed:false,
-  createdAt:new Date()
- }
- Tasks.push(newTask)
-  addListItem(newTask)
-  saveTasks()
-  input.value=""
-})
 function addListItem(task:Task){
   const item= document.createElement("li");
   const label= document.createElement("label");
